@@ -3,10 +3,9 @@ package com.example.demo.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.models.TestBase;
-
+import com.example.demo.models.Test;
 
 @Repository
-public interface TestRepository extends JpaRepository<TestBase, Long> {
+public interface TestRepository extends JpaRepository<Test, Long> {
 
 }

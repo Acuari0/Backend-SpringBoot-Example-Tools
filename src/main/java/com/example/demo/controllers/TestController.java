@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.constants.URLConstants;
-import com.example.demo.models.Test;
+import com.example.demo.models.TestBase;
 import com.example.demo.services.TestService;
 
 
@@ -21,13 +21,13 @@ public class TestController {
     TestService testService;
 
     @GetMapping(URLConstants.API_TEST_USER)
-    public Test getTestUser(@PathVariable Long id) {
+    public TestBase getTestUser(@PathVariable Long id) {
         return testService.getTestUser(id);
     }
 
     @PostMapping
-    public Long saveUser(@RequestBody Test test) {
-        return testService.saveTestUser(test);
+    public Long saveUser(@RequestBody TestBase name) {
+        return testService.saveTestUser(name);
     }
     
 }
